@@ -1,8 +1,8 @@
 import { themes } from '@/globals/themes'
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
 import { Link } from 'expo-router'
-import InputRegister from '../components/InputRegister'
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import InputRegister from './components/InputRegister'
 export default function Register() {
   return (
     <View style={styles.container}>
@@ -11,7 +11,7 @@ export default function Register() {
       </View>
       <InputRegister />
       <View>
-        <Link href={'./login'}>
+        <Link href={'/'}>
           <Text style={styles.linkBackLogin}>Voltar para Login</Text>
         </Link>
       </View>

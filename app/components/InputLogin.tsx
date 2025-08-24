@@ -24,9 +24,7 @@ export default function InputRef() {
       console.log(error)
     }
   }
-  function goToHome() {
-    router.push('/home')
-  }
+  
   return (
     
       <View style={styles.boxInput}>      
@@ -58,7 +56,7 @@ export default function InputRef() {
         <View>
           <TouchableOpacity
             style={styles.btnLogin}
-            onPress={goToHome}>
+            onPress={() => router.replace("/(tabs)/user")}>
             {
               loading?
                 <ActivityIndicator color={'#fff'} size={'small'} />

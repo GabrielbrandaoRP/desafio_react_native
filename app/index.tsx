@@ -1,12 +1,11 @@
-import { View,  Text, StyleSheet } from 'react-native'
-import InputField from './components/InputField'
 import { themes } from '@/globals/themes'
 import { Link } from 'expo-router'
+import { StyleSheet, Text, View } from 'react-native'
+import InputField from './components/InputLogin'
 
 
 
 export default function Login() {
-
 
   return (
     <View style={styles.container}>
@@ -16,7 +15,9 @@ export default function Login() {
       <InputField/>
       <View style={styles.boxBottom}>
         <Text>Não tem um conta?</Text>
-        <Link href={'/pages/Register'} style={styles.textBottom}>Cadastre-se</Link>
+          <Link href={'/register'} style={styles.textBottom}>
+            Cadastre-se
+          </Link>
       </View>
     </View>
   )

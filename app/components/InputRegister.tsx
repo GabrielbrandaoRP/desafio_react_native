@@ -1,14 +1,11 @@
 
 import { Ionicons } from '@expo/vector-icons';
-import { ActivityIndicator, Alert, Text, TextInput, TouchableOpacity, View, StyleSheet } from 'react-native';
+import { Text, TextInput, TouchableOpacity, View, StyleSheet } from 'react-native';
 import { router } from 'expo-router';
 import { themes } from '@/globals/themes';
 
 export default function InputRegister() {
   
-  function goToHome() {
-    router.push('/home');
-  }
   return (
     
       <View style={styles.boxInput}>      
@@ -41,7 +38,7 @@ export default function InputRegister() {
         
         <TouchableOpacity
             style={styles.btnLogin}
-            onPress={goToHome}>
+            onPress={() => router.replace("/(tabs)/user")}>
             <Text style={styles.btnLoginText}>Sign Up</Text>
           </TouchableOpacity>
         </View>

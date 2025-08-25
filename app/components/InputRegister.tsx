@@ -3,9 +3,15 @@ import { Ionicons } from '@expo/vector-icons';
 import { Text, TextInput, TouchableOpacity, View, StyleSheet } from 'react-native';
 import { router } from 'expo-router';
 import { themes } from '@/globals/themes';
+import { useState } from 'react';
 
 export default function InputRegister() {
-  
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleShowPassword = () => {
+      setShowPassword(!showPassword);
+    };
   return (
     
       <View style={styles.boxInput}>      
@@ -24,14 +30,17 @@ export default function InputRegister() {
         <View>
             <TextInput style={styles.inputPassword}
               placeholder='Password'
+              secureTextEntry={!showPassword}
+              onChangeText={setPassword}
             />
             <TouchableOpacity
-            style={styles.iconBtn}
+              style={styles.iconBtn}
+              onPress={handleShowPassword}
           >
             <Ionicons
               name={true ? "eye-off" : "eye"}
               size={24}
-              color="#9FA5C0"
+              color= "#9FA5C0"
             />
           </TouchableOpacity>
         </View>

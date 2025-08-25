@@ -6,33 +6,6 @@ import React, { useState } from 'react'
 import { Text, View, StyleSheet, FlatList, TouchableOpacity, Modal, TextInput } from 'react-native'
 import { useTasks } from '../context/TaskContext';
 
-// const mockTasks = [
-//   {
-//     id: "1",
-//     title: "Tarefa 1",
-//     status: "A fazer",
-//     createdAt: "17/03/2021",
-//     updatedAt: "17/03/2021",
-//     completed: false, // Add completed property
-//   },
-//   {
-//     id: "2",
-//     title: "Tarefa 2",
-//     status: "Feita",
-//     createdAt: "17/03/2021",
-//     updatedAt: "17/03/2021",
-//     completed: true, // Add completed property
-//   },
-//   {
-//     id: "3",
-//     title: "Tarefa 3",
-//     status: "A fazer",
-//     createdAt: "17/03/2021",
-//     updatedAt: "17/03/2021",
-//     completed: false, // Add completed property
-//   },
-// ];
-
 
 export default function Home() {
   

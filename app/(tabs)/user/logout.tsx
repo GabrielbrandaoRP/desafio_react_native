@@ -25,9 +25,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   btnLogout: {
-    height: 50,
-    borderWidth: 1,
-    borderColor: '#ccc',
+    height: 55,
+    borderWidth: 2,
+    borderColor: themes.colors.green,
     alignItems: 'center',
     justifyContent: 'center',
     width: 250,

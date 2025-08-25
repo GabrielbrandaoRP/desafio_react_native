@@ -75,7 +75,7 @@ export default function UserLayout() {
       <AddTaskModal
       visible={isAddModalVisible}
       onClose={() => setIsAddModalVisible(false)}
-      onAddTask={(newTask) => setTasks((prev) => [...prev, newTask])}
+      // onAddTask={(newTask) => setTasks((prev) => [...prev, newTask])}
       />
      
       

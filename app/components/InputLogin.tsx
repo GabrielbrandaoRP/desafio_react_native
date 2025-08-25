@@ -9,6 +9,8 @@ export default function InputRef() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  
   async function testeLogin() {
     try {
       setLoading(true);
@@ -24,7 +26,9 @@ export default function InputRef() {
       console.log(error)
     }
   }
-  
+  const handleShowPassword = () => {
+      setShowPassword(!showPassword);
+    };
   return (
     
       <View style={styles.boxInput}>      
@@ -37,16 +41,18 @@ export default function InputRef() {
             <TextInput style={styles.inputPassword}
               placeholder='Password'
               value={password}
-            
-            onChangeText={setPassword}
+              secureTextEntry={!showPassword}
+              onChangeText={setPassword}
             />
             <TouchableOpacity
-            style={styles.iconBtn}
+              style={styles.iconBtn}
+              onPress={handleShowPassword}
           >
             <Ionicons
               name={true ? "eye-off" : "eye"}
               size={24}
-              color="#9FA5C0"
+            color="#9FA5C0"
+            
             />
           </TouchableOpacity>
         </View>
